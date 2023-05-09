@@ -1,8 +1,9 @@
 package com.TaehyunDev;
 
+import com.TaehyunDev.Instrument.InstrumentSpec;
 import lombok.Getter;
 
-public class GuitarSpec {
+public class GuitarSpec extends InstrumentSpec {
     @Getter
     private Builder builder;
     @Getter
@@ -19,12 +20,8 @@ public class GuitarSpec {
 
     public GuitarSpec(Builder builder, String model, Type type,
                       int numStrings, Wood backWood, Wood topWood) {
-        this.builder = builder;
-        this.model = model;
-        this.type = type;
+        super(builder, model, type, backWood, topWood);
         this.numStrings = numStrings;
-        this.backWood = backWood;
-        this.topWood = topWood;
     }
 
     public boolean matches(GuitarSpec otherSpec) {

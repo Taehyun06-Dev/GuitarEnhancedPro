@@ -1,8 +1,9 @@
 package com.TaehyunDev;
 
+import com.TaehyunDev.Instrument.Instrument;
 import lombok.Getter;
 
-public class Guitar {
+public class Guitar extends Instrument {
 
     @Getter
     private String serialNumber;
@@ -12,8 +13,6 @@ public class Guitar {
     GuitarSpec spec;
 
     public Guitar(String serialNumber, double price, GuitarSpec spec) {
-        this.serialNumber = serialNumber;
-        this.price = price;
-        this.spec = spec;
+        super(serialNumber, price, spec);
     }
 }
